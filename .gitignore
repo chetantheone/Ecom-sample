@@ -10,6 +10,11 @@
 
 # production
 /build
+.env
+apis-build/
+sampleproduct.json
+
+.vscode/
 
 # misc
 .DS_Store
