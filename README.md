@@ -4,11 +4,8 @@
 * In backend User is assumed hardcoded
 * Current cart will have last active cart
 
-# Demo
-
-- Use this link for live demo
-
-*Please Note that I have hosted it in free server it might take time to up after a sleep* 
+# Before getting start
+Before running the project insert **sampleproduct.json** data in in *products* collection
 
 
 ## Tech stack 

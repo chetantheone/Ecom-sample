@@ -12,7 +12,6 @@
 /build
 .env
 apis-build/
-sampleproduct.json
 
 .vscode/
 
