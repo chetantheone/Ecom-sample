@@ -9,9 +9,9 @@
 /coverage
 
 # production
-# /build
+/build
 .env
-# apis-build/
+apis-build/
 sampleproduct.json
 
 .vscode/
