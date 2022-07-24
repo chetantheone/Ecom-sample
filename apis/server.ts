@@ -1,5 +1,6 @@
 import express from 'express';
 import http from 'http';
+import path from 'path';
 import mongoose from 'mongoose';
 import { config } from './config/config';
 import Logging from './library/Logging';
@@ -35,10 +36,14 @@ const StartServer = () => {
 
     router.use(express.urlencoded({ extended: true }));
     router.use(express.json());
+    router.use(express.static(path.join(__dirname, '../build')));
 
     /** Routes */
     router.use('/api/product', productRoutes);
     router.use('/api/cart', cartRoutes);
+    router.get('*', function (_req, res) {
+        res.sendFile(path.join(__dirname, '../build', 'index.html'));
+    });
 
     /** Error handling */
     router.use((req, res, next) => {

@@ -90,9 +90,9 @@ function Product() {
             try {
                 await axios.post('/api/cart/create', filteredSelectedProducts);
                 setLoaded(true);
-                navigate.push('/cart');
+                navigate('/cart');
             } catch (err) {
-                alert("Something is wrong when creating a cart")
+                return alert("Something is wrong when creating a cart")
             }
         })();
     }
