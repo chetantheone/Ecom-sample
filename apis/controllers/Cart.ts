@@ -57,7 +57,7 @@ const getCurrentActiveCart = async (req: Request, res: Response) => {
     try {
         const currentCart = await Cart.findOne({
             userId,
-            // status: 0
+            status: 0
         }).sort({ _id: -1 }).lean();
 
         if (!currentCart) {
